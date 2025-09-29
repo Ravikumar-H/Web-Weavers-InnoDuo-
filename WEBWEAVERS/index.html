@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IEEE Student Branch SMVITM</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#" data-route="home">
+        <i class="fa-solid fa-bolt me-1"></i> IEEE SMVITM
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#" data-route="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-route="about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-route="societies">Societies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-route="events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-route="team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-route="achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-route="publications">Publications</a></li>
+        </ul>
+
+        <div class="d-flex ms-3">
+          <button class="btn btn-outline-light me-2" id="subscribeBtn"><i class="fa-regular fa-envelope"></i> Subscribe</button>
+          <button class="btn btn-light" id="loginBtn" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa-solid fa-user"></i> Login</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main container -->
+  <main class="container py-5">
+
+    <!-- Home -->
+    <section id="home" class="page">
+      <div class="row align-items-center mb-4">
+        <div class="col-lg-7">
+          <h1 class="display-5">IEEE Student Branch — SMVITM</h1>
+          <p class="lead">Connecting students, organizing events, and promoting technology & humanitarian activities.</p>
+          <div class="mb-3">
+            <button class="btn btn-primary me-2" data-route="events">See Events</button>
+            <button class="btn btn-outline-primary" data-route="about">About Us</button>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="data:image/png;base64,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" alt="IEEE" class="img-fluid rounded shadow" width="300" height="300">
+        </div>
+      </div>
+
+      <h3 class="mb-3">Upcoming Events</h3>
+      <div id="upcomingRow" class="row g-3 mb-5"></div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card p-3 h-100">
+            <h5>Latest Announcement</h5>
+            <p id="latestAnnouncement" class="mb-0">No announcements yet. Admins can post announcements from dashboard.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card p-3 h-100">
+            <h5>Societies</h5>
+            <p class="mb-0">Communication | Computer Society | SIGHT | WIE</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="page d-none">
+      <h2>About Us</h2>
+      <p>IEEE Student Branch of SMVITM works to foster interest in engineering, organizes technical workshops, seminars, hackathons and social outreach activities.</p>
+
+      <h4 class="mt-4">Pages / Sections to Include</h4>
+      <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Team</li>
+        <li>Achievements</li>
+        <li>Publications</li>
+      </ul>
+    </section>
+
+    <!-- Societies -->
+    <section id="societies" class="page d-none">
+      <h2>Societies</h2>
+      <div class="row g-3 mt-3" id="societiesList"></div>
+    </section>
+
+    <!-- Events -->
+    <section id="events" class="page d-none">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Events</h2>
+        <div>
+          <button class="btn btn-outline-secondary me-2" id="newEventBtn" data-bs-toggle="modal" data-bs-target="#eventModal"><i class="fa-solid fa-plus"></i> Add Event (demo)</button>
+          <input class="form-control d-inline-block" id="searchEvents" placeholder="Search events..." style="width:220px">
+        </div>
+      </div>
+
+      <div id="eventsRow" class="row g-3"></div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="page d-none">
+      <h2>Team</h2>
+      <div class="row g-3 mt-3" id="teamRow"></div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="page d-none">
+      <h2>Achievements</h2>
+      <div id="achieveRow" class="row g-3 mt-3"></div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="page d-none">
+      <h2>Publications</h2>
+      <div id="pubRow" class="list-group mt-3"></div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light py-4">
+    <div class="container text-center small">
+      © <span id="year"></span> IEEE Student Branch - SMVITM • Built for demo
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <form id="loginForm" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Member Login</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input class="form-control" id="loginEmail" type="email" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input class="form-control" id="loginPassword" type="password" required>
+          </div>
+          <div class="form-text">This demo uses client-side fake auth.</div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Event Add Modal (client-only) -->
+  <div class="modal fade" id="eventModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <form id="eventForm" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Event (demo)</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-2">
+            <div class="col-md-6">
+              <label class="form-label">Title</label>
+              <input id="evTitle" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Organizer (society)</label>
+              <select id="evOrganizer" class="form-select"></select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Description</label>
+              <textarea id="evDesc" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Start</label>
+              <input id="evStart" class="form-control" type="datetime-local" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Venue</label>
+              <input id="evVenue" class="form-control">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Cover Image</label>
+              <input id="evImage" class="form-control" type="file" accept="image/*">
+              <div id="evPreview" class="mt-2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary" type="submit">Create (client-only)</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast container for notifications -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1200;">
+    <div id="toastContainer"></div>
+  </div>
+
+  <!-- Event Detail Modal -->
+  <div class="modal fade" id="eventDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="detailTitle" class="modal-title"></h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div id="detailBody"></div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-primary" id="rsvpBtn">RSVP (demo)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- App JS -->
+  <script src="app.js"></script>
+</body>
+</html>
